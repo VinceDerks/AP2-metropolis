@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('cells', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('grid_function_id')->nullable()->constrained();
+            $table->foreignId('component_id')->nullable()->constrained();
             $table->foreignId('grid_id')->constrained();
             $table->string('x_coordinate');
             $table->string('y_coordinate');

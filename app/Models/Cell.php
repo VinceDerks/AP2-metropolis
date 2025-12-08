@@ -15,7 +15,7 @@ class Cell extends Model
     protected $fillable = [
         'x_coordinate',
         'y_coordinate',
-        'grid_function_id',
+        'component_id',
         'grid_id',
     ];
 

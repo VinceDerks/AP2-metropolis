@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\GridFunction;
+use App\Models\Component;
 use Illuminate\Http\Request;
 
-class GridFunctionController extends Controller
+class ComponentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class GridFunctionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(GridFunction $gridFunction)
+    public function show(Component $gridFunction)
     {
         //
     }
@@ -42,7 +42,7 @@ class GridFunctionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(GridFunction $gridFunction)
+    public function edit(Component $gridFunction)
     {
         //
     }
@@ -50,7 +50,7 @@ class GridFunctionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, GridFunction $gridFunction)
+    public function update(Request $request, Component $gridFunction)
     {
         //
     }
@@ -58,7 +58,7 @@ class GridFunctionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(GridFunction $gridFunction)
+    public function destroy(Component $gridFunction)
     {
         //
     }

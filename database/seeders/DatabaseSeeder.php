@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             CellSeeder::class,
-            GridFunctionSeeder::class,
+            ComponentSeeder::class,
             GridSeeder::class,
         ]);
     }
