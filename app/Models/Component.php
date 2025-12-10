@@ -9,4 +9,12 @@ class Component extends Model
 {
     /** @use HasFactory<\Database\Factories\ComponentFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'liveability',
+        'well_being',
+        'economic',
+        'sustainability'
+    ];
 }

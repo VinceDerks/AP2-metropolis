@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('components', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('liveability');
+            $table->integer('well_being');
+            $table->integer('economic');
+            $table->integer('sustainability');
             $table->timestamps();
         });
     }

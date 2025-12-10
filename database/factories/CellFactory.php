@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Component;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,7 @@ class CellFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'component_id' => Component::all(['id'])->random(),
         ];
     }
 }

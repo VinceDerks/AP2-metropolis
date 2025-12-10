@@ -21,9 +21,15 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@app.com',
         ]);
 
+        User::factory([
+            'first_name' => 'Mike',
+            'last_name' => 'user',
+        ]);
+
         $this->call([
-            CellSeeder::class,
+            UserSeeder::class,
             ComponentSeeder::class,
+            CellSeeder::class,
             GridSeeder::class,
         ]);
     }

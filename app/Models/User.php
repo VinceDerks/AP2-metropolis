@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -47,6 +48,17 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function fullName(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => trim(
+                "{$this->first_name}" .
+                ($this->middle_name ? " {$this->middle_name}" : "") .
+                " {$this->last_name}",
+            ),
+        );
     }
 
     public function grid(): HasOne
