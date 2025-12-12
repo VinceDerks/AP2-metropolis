@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,6 +23,8 @@ class ComponentFactory extends Factory
             'well_being' => fake()->numberBetween(1, 100),
             'economic' => fake()->numberBetween(1, 100),
             'sustainability' => fake()->numberBetween(1, 100),
+            'catagorie_id' => Category::all(['id'])->pluck(['id'])->random(),
+            'image_path' => fake()->randomElement(['component-seeder']),
         ];
     }
 }

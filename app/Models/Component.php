@@ -15,6 +15,7 @@ class Component extends Model
         'liveability',
         'well_being',
         'economic',
-        'sustainability'
+        'sustainability',
+        'image_path'
     ];
 }
