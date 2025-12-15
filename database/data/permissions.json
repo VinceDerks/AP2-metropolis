@@ -1,0 +1,14 @@
+[
+    {
+        "name": "administrator functions overview",
+        "system_name": "component.index"
+    },
+    {
+        "name": "create functions",
+        "system_name": "component.create"
+    },
+    {
+        "name": "update functions",
+        "system_name": "component.update"
+    }
+]

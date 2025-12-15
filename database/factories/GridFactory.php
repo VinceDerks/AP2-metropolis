@@ -18,7 +18,7 @@ class GridFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::all(['id'])->random(),
+            'user_id' => User::pluck('id')->random(),
             'name' => fake()->word(),
         ];
     }

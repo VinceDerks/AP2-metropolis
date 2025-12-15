@@ -12,10 +12,12 @@ class Component extends Model
 
     protected $fillable = [
         'name',
-        'liveability',
-        'well_being',
-        'economic',
-        'sustainability',
-        'image_path'
+        'safety',
+        'recreation',
+        'environment',
+        'provision',
+        'mobility',
+        'image_path',
+        'category_id'
     ];
 }

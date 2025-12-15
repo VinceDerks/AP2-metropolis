@@ -23,8 +23,8 @@ class Grid extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function cell(): belongsToMany
+    public function cells(): hasMany
     {
-        return $this->belongsToMany(Cell::class);
+        return $this->hasMany(Cell::class);
     }
 }

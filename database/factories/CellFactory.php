@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Component;
+use App\Models\Grid;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,10 @@ class CellFactory extends Factory
     public function definition(): array
     {
         return [
-            'component_id' => Component::all(['id'])->random(),
+            'grid_id' => Grid::pluck('id')->random(),
+            'component_id' => Component::pluck('id')->random(),
+            'x_coordinate' => null,
+            'y_coordinate' => null,
         ];
     }
 }

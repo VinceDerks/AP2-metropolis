@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,22 +17,35 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory()->create([
+
+        $this->callOnce([
+            PermissionSeeder::class,
+            RoleSeeder::class,
+        ]);
+
+        $this->addRoleByName(User::factory()->create([
             'first_name' => 'john',
+            'middle_name' => 'super user',
             'last_name' => 'doe',
             'email' => 'user@app.com',
-        ]);
+        ]), 'super role');
 
-        User::factory([
-            'first_name' => 'Mike',
-            'last_name' => 'user',
-        ]);
+        $this->addRoleByName(User::factory()->create([
+            'first_name' => 'jane',
+            'last_name' => 'doe',
+            'email' => 'library@app.com'
+        ]), 'Library Manager');
 
         $this->call([
-            UserSeeder::class,
-            ComponentSeeder::class,
-            CellSeeder::class,
+            ComponentAndCategorySeeder::class,
             GridSeeder::class,
+            CellSeeder::class,
         ]);
+    }
+
+    private function addRoleByName(User $user, string $name)
+    {
+        $roleToAttach =  Role::where('name', '=', $name)->pluck('id')->toArray();
+        $user->roles()->attach($roleToAttach);
     }
 }

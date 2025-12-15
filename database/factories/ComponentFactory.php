@@ -19,11 +19,12 @@ class ComponentFactory extends Factory
     {
         return [
             'name' => fake()->word(),
-            'liveability' => fake()->numberBetween(1, 100),
-            'well_being' => fake()->numberBetween(1, 100),
-            'economic' => fake()->numberBetween(1, 100),
-            'sustainability' => fake()->numberBetween(1, 100),
-            'catagorie_id' => Category::all(['id'])->pluck(['id'])->random(),
+            'safety' => fake()->numberBetween(-5, 5),
+            'recreation' => fake()->numberBetween(-5, 5),
+            'environment' => fake()->numberBetween(-5, 5),
+            'provision' =>fake()->numberBetween(-5, 5),
+            'mobility' => fake()->numberBetween(-5, 5),
+            'category_id' => Category::pluck('id')->random(),
             'image_path' => fake()->randomElement(['component-seeder']),
         ];
     }

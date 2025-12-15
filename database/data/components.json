@@ -1,0 +1,119 @@
+[
+    {
+        "name":"Police station",
+        "safety": 5,
+        "recreation": 1,
+        "environment": 0,
+        "provision": 1,
+        "mobility": 2,
+        "category": "safety"
+    },
+    {
+        "name":"Fire station",
+        "safety": 4,
+        "recreation": 1,
+        "environment": 2,
+        "provision": 1,
+        "mobility": 2,
+        "category": "safety"
+    },
+    {
+        "name":"Park",
+        "safety": -2,
+        "recreation": 5,
+        "environment": 4,
+        "provision": 0,
+        "mobility": 0,
+        "category": "recreation"
+    },
+    {
+        "name":"Cinema",
+        "safety": -1,
+        "recreation": 4,
+        "environment": 0,
+        "provision": 2,
+        "mobility": 0,
+        "category": "recreation"
+    },
+    {
+        "name":"Sport park",
+        "safety": 0,
+        "recreation": 5,
+        "environment": 2,
+        "provision": 3,
+        "mobility": 0,
+        "category": "recreation"
+    },
+    {
+        "name":"Water purifecation plantation",
+        "safety": 0,
+        "recreation": 0,
+        "environment": 5,
+        "provision": 2,
+        "mobility": 0,
+        "category": "environment"
+    },
+    {
+        "name":"School",
+        "safety": 2,
+        "recreation": 2,
+        "environment": 0,
+        "provision": 5,
+        "mobility": -3,
+        "category": "provision"
+    },
+    {
+        "name":"Store",
+        "safety": 0,
+        "recreation": 0,
+        "environment": -2,
+        "provision": 5,
+        "mobility": 0,
+        "category": "provision"
+    },
+    {
+        "name":"Hospital",
+        "safety": 3,
+        "recreation": 0,
+        "environment": 0,
+        "provision": 5,
+        "mobility": 0,
+        "category": "provision"
+    },
+    {
+        "name":"Station",
+        "safety": -2,
+        "recreation": 2,
+        "environment": 0,
+        "provision": 4,
+        "mobility": 5,
+        "category": "mobility"
+    },
+    {
+        "name":"Route",
+        "safety": -4,
+        "recreation": 2,
+        "environment": -4,
+        "provision": 3,
+        "mobility": 5,
+        "category": "mobility"
+    },
+    {
+        "name":"Biking lane",
+        "safety": 0,
+        "recreation": 3,
+        "environment": 3,
+        "provision": 3,
+        "mobility": 4,
+        "category": "mobility"
+    },
+    {
+        "name":"Gas station",
+        "safety": -2,
+        "recreation": 0,
+        "environment": -4,
+        "provision": 1,
+        "mobility": 4,
+        "category": "mobility"
+    }
+]
