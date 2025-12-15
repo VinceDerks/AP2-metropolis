@@ -9,10 +9,4 @@
             "component.*"
         ]
     },
-    {
-        "name": "Single Example",
-        "permissions" : [
-            "component.create"
-        ]
-    }
 ]
