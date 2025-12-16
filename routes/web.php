@@ -7,3 +7,6 @@ Route::get('/', function () {
 
     return view('welcome');
 });
+Route::get('/grid', function () {
+    return view('grid');
+});
