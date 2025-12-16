@@ -11,7 +11,7 @@ class AuthController extends Controller
 
     public function create()
     {
-
+        return view("Authentication.login");
     }
 
     public function store(LoginRequest $request)
